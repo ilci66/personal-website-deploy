@@ -8,8 +8,8 @@ const app = express();
 
 app.use(helmet());
 
-app.use(bodyParser.json({limit: '1mb', extended: true}))
-app.use(bodyParser.urlencoded({limit: '1mb', extended: true }))
+app.use(bodyParser.json({limit: '10mb', extended: true}))
+app.use(bodyParser.urlencoded({limit: '10mb', extended: true }))
 
 // app.use('/', express.static(__dirname + '/public'));
 app.use('/', express.static(path.join(__dirname , '..',  '/public')));
