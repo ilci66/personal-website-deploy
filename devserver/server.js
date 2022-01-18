@@ -25,4 +25,4 @@ app.use('/', routes)
 // const HOST = '0.0.0.0';
 // app.listen(PORT, HOST , () => console.log(`app is listening on port ${PORT}`))
 
-app.listen(process.env.PORT, () => console.log("app is listening on port 3003"))
+app.listen(process.env.PORT, () => console.log("app is listening on port:", process.env.PORT))
