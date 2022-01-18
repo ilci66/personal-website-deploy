@@ -19,10 +19,10 @@ app.use('/', routes)
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
-const PORT = '3003'
+// const PORT = '3003'
 
 
 // const HOST = '0.0.0.0';
 // app.listen(PORT, HOST , () => console.log(`app is listening on port ${PORT}`))
 
-app.listen(PORT, () => console.log("app is listening on port 3003"))
+app.listen(process.env.PORT, () => console.log("app is listening on port 3003"))
