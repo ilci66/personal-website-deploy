@@ -8,8 +8,8 @@ const app = express();
 
 app.use(helmet());
 
-app.use(bodyParser.json({limit: '20mb', extended: true}))
-app.use(bodyParser.urlencoded({limit: '20mb', extended: true }))
+app.use(bodyParser.json({limit: '1mb', extended: true}))
+app.use(bodyParser.urlencoded({limit: '1mb', extended: true }))
 
 // app.use('/', express.static(__dirname + '/public'));
 app.use('/', express.static(path.join(__dirname , '..',  '/public')));
@@ -19,10 +19,10 @@ app.use('/', routes)
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
-// const PORT = '3003'
+const PORT = process.env.PORT || '3003'
 
 
-// const HOST = '0.0.0.0';
+const HOST = '0.0.0.0';
 // app.listen(PORT, HOST , () => console.log(`app is listening on port ${PORT}`))
 
-app.listen(process.env.PORT, () => console.log("app is listening on port:", process.env.PORT))
+app.listen(PORT, () => console.log("app is listening on port 3003"))
