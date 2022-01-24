@@ -12,11 +12,11 @@ router.post('/contact', async (req, res, next) => {
     return res.status(400).json({ message: "Missing required fields." })
   } else {
     await connection;
-    console.log('ok it works ==>')
+    // console.log('ok it works ==>')
   
     // console.log(mongoose.connection.readyState);
   
-    console.log(name,email,message)
+    // console.log(name,email,message)
     let newForm = new Form({ name, email, message }) 
     await newForm.save((err, data) => {
       if(err || !data) res.status(400).json({ message: "Something went wrong sending your message!" })
