@@ -4,3 +4,4 @@ Disallow: /public/assets/css
 Disallow: /public/assets/images
 Disallow: /public/assets/js
 Disallow: /public/assets/webfonts
+Disallow: /devserver
